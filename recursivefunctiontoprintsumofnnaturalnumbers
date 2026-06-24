@@ -1,0 +1,17 @@
+#include<stdio.h>
+//function to find sum of n natural numbers using recursion
+long long findSum(long long n);
+long long findSum(long long n){
+    if(n==0)
+    return 0;
+    else
+    return n+findSum(n-1);
+}
+int main(){
+    
+    long long n;
+    printf("enter the number to find the sum of n natural numbers from 1to n: ");
+    scanf("%lld", &n);
+    printf("the sum of n natural numbers from 1 to n is %lld", findSum(n));
+    return 0;
+}
